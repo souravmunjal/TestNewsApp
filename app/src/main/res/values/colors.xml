@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#30509B</color>  //for title bar
+    <color name="colorPrimaryDark">#244080</color> //for notification bar
+    <color name="onPressed">#244080</color>
+    <color name="colorAccent">#888888</color>
+    <color name="gray">#272626</color>
+    <color name="pressed">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="listprimary_black">#dd000000</color>
+    <color name="black_38">#60000000</color>
+    <color name="smalltext_lightgrey">#DDDDDD</color>
+    <color name="textlink_blue">#36a2eb</color>
+    <color name="black_overlay">#33000000</color>
+    <color name="divider">#dddddd</color>
+    <color name="black">#000000</color>
+    <color name="border">#DDDDDD</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF7F00</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="bright_pink">#FF007F</color>
+    <color name="chartreuse">#7FFF00</color>
+    <color name="green">#00FF00</color>
+    <color name="spring_green">#00FF7F</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="azure">#007FFF</color>
+    <color name="blue">#0000FF</color>
+    <color name="dark_orange">#FF8C00</color>
+    <color name="violet">#7F00FF</color>
+    <color name="magenta">#FF00FF</color>
+    <color name="transparent">#00000000</color>
+    <color name="googlered">#dd4b39</color>
+    <color name="facebookblue">#3b5998</color>
+    <color name="verifygreen">#2b5c32</color>
+    <color name="printbasicblue">#30509B</color>
+    <color name="backcolor2">#540404</color>
+    <color name="lightblue">#f1faf6</color>
+    <color name="darkwhite">#EEECEC</color>
+    <color name="placeholder_bg">#dddddd</color>
+    <color name="item_name">#0c0c0c</color>
+    <color name="description">#1a1a1a</color>
+    <color name="chef">#777</color>
+    <color name="timestamp">#777</color>
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:imagesetter="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="obj"
+            type="apps.startup.testapp.models.Article" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.jgabrielfreitas.core.BlurImageView
+        android:id="@+id/dogBlurImageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_corner_background"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:radius="24"
+        imagesetter:load_thumbnail="@{obj.urlToImage}" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/armata"
+        android:maxLines="3"
+        android:text="@{obj.title}"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/dogBlurImageView"
+        app:layout_constraintEnd_toEndOf="@+id/dogBlurImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dogBlurImageView"
+        imagesetter:text="Larry Kramer, Author and Outspoken AIDS Activist, Dies at 84 - The New York Times"></TextView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="By"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@{obj.author}"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/dogBlurImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        imagesetter:text="Daniel Lewis" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="@{obj.content}"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dogBlurImageView"
+        imagesetter:text="A new era in the American space program is set to begin as two veteran NASA astronauts lift off aboard a SpaceX Crew Dragon en route to the International Space Station. Weather permitting, the launch… [+1220 chars]A new era in the American space program is set to begin as two veteran NASA astronauts lift off aboard a SpaceX Crew Dragon en route to the International Space Station. Weather permitting, the launch… [+1220 chars]A new era in the American space program is set to begin as two veteran NASA astronauts lift off aboard a SpaceX Crew Dragon en route to the International Space Station. Weather permitting, the launch… [+1220 chars]A new era in the American space program is set to begin as two veteran NASA astronauts lift off aboard a SpaceX Crew Dragon en route to the International Space Station. Weather permitting, the launch… [+1220 charA new era in the American space program is set to begin as two veteran NASA astronauts lift off aboard a SpaceX Crew Dragon en route to the International Space Station. Weather permitting, the launch… [+1220 chars]sA new era in the American space program is set to begin as two veteran NASA astronauts lift off aboard a SpaceX Crew Dragon en route to the International Space Station. Weather permitting, the launch… [+1220 chars]]A new era in the American space program is set to begin as two veteran NASA astronauts lift off aboard a SpaceX Crew Dragon en route to the International Space Station. Weather permitting, the launch… [+1220 chars]A new era in the American space program is set to begin as two veteran NASA astronauts lift off aboard a SpaceX Crew Dragon en route to the International Space Station. Weather permitting, the launch… [+1220 chars]" />
+
+    <TextView
+        android:id="@+id/read_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Click to Read Full Article"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/content"></TextView>
+
+    <TextView
+        android:id="@+id/dateandtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="@{obj.publishedAt}"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        imagesetter:text="2020-05-27T19:25:01Z" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
