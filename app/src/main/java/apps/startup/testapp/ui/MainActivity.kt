@@ -61,8 +61,8 @@ class MainActivity : DaggerAppCompatActivity() {
                 }
                 override fun onNext(@NonNull newData: NewData) {
                     // put new data in table
-                    putNewDataInTable(newData.articles!!)
-                    putTheData(newData.articles!!)
+                    putNewDataInTable(newData.articles)
+                    putTheData(newData.articles)
                 }
                 override fun onError(@NonNull e: Throwable) {
                 }
@@ -71,23 +71,25 @@ class MainActivity : DaggerAppCompatActivity() {
             })
     }
 
-    private fun putNewDataInTable(data:ArrayList<Article> ) {
+    private fun putNewDataInTable(data:ArrayList<Article>? ) {
         emptyTable(database)
-        for (d in data) {
-            insertData(
-                d.author,
-                d.title,
-                d.description,
-                d.url,
-                d.urlToImage,
-                d.publishedAt,
-                d.content,
-                database
-            )
+        if (data != null) {
+            for (d in data) {
+                insertData(
+                    d.author,
+                    d.title,
+                    d.description,
+                    d.url,
+                    d.urlToImage,
+                    d.publishedAt,
+                    d.content,
+                    database
+                )
+            }
         }
     }
 
-    private fun putTheData(list:ArrayList<Article> ){
+    private fun putTheData(list:ArrayList<Article>? ){
          var mCustomPagerAdapter = NewsItemAdapter(list,
              object : Callback {
                  override fun onEventDone(`object`: Any) {

@@ -10,10 +10,10 @@ import apps.startup.testapp.Callback
 import apps.startup.testapp.R
 import apps.startup.testapp.base.BaseAdapter
 
-class NewsItemAdapter(internal var articles: ArrayList<Article>, internal var callback: Callback) :
+class NewsItemAdapter(internal var articles: ArrayList<Article>?, internal var callback: Callback) :
     BaseAdapter() {
     override fun getDataAtPosition(position: Int): Any {
-        return articles[position]
+        return articles!!.get(position)
     }
 
     override fun getLayoutIdForType(viewType: Int): Int {
@@ -29,6 +29,6 @@ class NewsItemAdapter(internal var articles: ArrayList<Article>, internal var ca
     }
 
     override fun getItemCount(): Int {
-        return articles.size
+        return articles!!.size
     }
 }

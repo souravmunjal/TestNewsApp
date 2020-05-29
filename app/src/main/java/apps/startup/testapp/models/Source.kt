@@ -9,9 +9,9 @@ class Source : Serializable {
 
     @SerializedName("id")
     @Expose
-    var id: String? = null
+     var id: String = ""
     @SerializedName("name")
     @Expose
-    var name: String? = null
+     var name: String = ""
 
 }

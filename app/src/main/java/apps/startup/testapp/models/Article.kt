@@ -8,29 +8,25 @@ import java.io.Serializable
 
 class Article : Serializable {
 
-    @SerializedName("source")
-    @Expose
-    var source: Source? = null
     @SerializedName("author")
     @Expose
-    var author: String? = null
+    var author: String = ""
     @SerializedName("title")
     @Expose
-    var title: String? = null
+    var title: String = ""
     @SerializedName("description")
     @Expose
-    var description: String? = null
+    var description: String = ""
     @SerializedName("url")
     @Expose
-    var url: String? = null
+    var url: String = ""
     @SerializedName("urlToImage")
     @Expose
-    var urlToImage: String? = null
+    var urlToImage: String = ""
     @SerializedName("publishedAt")
     @Expose
-    var publishedAt: String? = null
+    var publishedAt: String = ""
     @SerializedName("content")
     @Expose
-    var content: String? = null
-
+    var content: String = ""
 }

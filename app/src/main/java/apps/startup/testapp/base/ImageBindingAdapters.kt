@@ -23,26 +23,27 @@ import jp.wasabeef.glide.transformations.BlurTransformation
 class ImageBindingAdapters {
 
     @BindingAdapter("imagesetter:imageurl")
-    fun setImageUrl(imageView: ImageView, imageurl: String) {
-        Log.e("fsdfs", "hey f$imageurl")
+    fun setImageUrl(imageView: ImageView, imageurl: String?) {
         Picasso.get().load(imageurl).placeholder(R.drawable.placeholder)
             .error(R.drawable.placeholder).into(imageView)
     }
 
     @BindingAdapter("half_url")
-    fun setImageHalfUrl(imageView: ImageView, url: String) {
+    fun setImageHalfUrl(imageView: ImageView, url: String?) {
         Picasso.get().load(url).placeholder(R.drawable.placeholder).error(R.drawable.placeholder)
             .into(imageView)
     }
 
     @BindingAdapter("android:src")
-    fun loadImage(view: ImageView, id: Int) {
-        Picasso.get().load(id).placeholder(R.drawable.placeholder).error(R.drawable.placeholder)
-            .into(view)
+    fun loadImage(view: ImageView, id: Int?) {
+        if (id != null) {
+            Picasso.get().load(id).placeholder(R.drawable.placeholder).error(R.drawable.placeholder)
+                .into(view)
+        }
     }
 
     @BindingAdapter("android:uri")
-    fun loadImage(view: ImageView, id: Uri) {
+    fun loadImage(view: ImageView, id: Uri?) {
         Picasso.get().load(id).into(view)
     }
 
@@ -53,7 +54,7 @@ class ImageBindingAdapters {
 
 
     @BindingAdapter("imagesetter:load_thumbnail")
-    fun loadThumbNail(view: ImageView, uri: String) {
+    fun loadThumbNail(view: ImageView, uri: String?) {
         Glide.with(TestApplication.instance!!.baseContext).load(uri)
             .apply(RequestOptions.bitmapTransform(BlurTransformation(20, 3)))
             .into(view)

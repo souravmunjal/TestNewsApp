@@ -27,7 +27,7 @@ abstract class BaseAdapter : RecyclerView.Adapter<BaseAdapter.MyViewHolder>() {
             }
         }
 
-        fun bind(obj: Any) {
+        fun bind(obj: Any?) {
             binding.setVariable(apps.startup.testapp.BR.obj, obj)
             binding.executePendingBindings()
         }
