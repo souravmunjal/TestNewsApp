@@ -51,13 +51,13 @@ class SplashActivity : DaggerAppCompatActivity() {
 
         do {
             var article= Article()
-            article.author=cursor.getString(2);
-            article.title=cursor.getString(3);
-            article.description=cursor.getString(4);
-            article.url=cursor.getString(5);
-            article.urlToImage=cursor.getString(6);
-            article.publishedAt=cursor.getString(7);
-            article.content=cursor.getString(8);
+            article.author=cursor?.getString(2);
+            article.title=cursor?.getString(3);
+            article.description=cursor?.getString(4);
+            article.url=cursor?.getString(5);
+            article.urlToImage=cursor?.getString(6);
+            article.publishedAt=cursor?.getString(7);
+            article.content=cursor?.getString(8);
             articleList.add(article)
         }while (cursor.moveToNext())
         return articleList

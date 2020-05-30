@@ -10,23 +10,23 @@ class Article : Serializable {
 
     @SerializedName("author")
     @Expose
-    var author: String = ""
+    var author: String?=null
     @SerializedName("title")
     @Expose
-    var title: String = ""
+    var title: String ?=null
     @SerializedName("description")
     @Expose
-    var description: String = ""
+    var description: String? = null
     @SerializedName("url")
     @Expose
-    var url: String = ""
+    var url: String? = null
     @SerializedName("urlToImage")
     @Expose
-    var urlToImage: String = ""
+    var urlToImage: String? =null
     @SerializedName("publishedAt")
     @Expose
-    var publishedAt: String = ""
+    var publishedAt: String ?= null
     @SerializedName("content")
     @Expose
-    var content: String = ""
+    var content: String ?=null
 }

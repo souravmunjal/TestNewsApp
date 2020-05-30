@@ -52,12 +52,10 @@ class ImageBindingAdapters {
         Picasso.get().load(id).into(view)
     }
 
-
     @BindingAdapter("imagesetter:load_thumbnail")
     fun loadThumbNail(view: ImageView, uri: String?) {
         Glide.with(TestApplication.instance!!.baseContext).load(uri)
             .apply(RequestOptions.bitmapTransform(BlurTransformation(20, 3)))
             .into(view)
     }
-
 }
